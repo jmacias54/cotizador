@@ -143,3 +143,7 @@ var planes_deco = [{
     cantidad:0,
     precio: 4034
 }];
+
+
+
+var planes_add = [];

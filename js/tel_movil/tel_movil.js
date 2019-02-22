@@ -35,7 +35,7 @@ function _planes_telefonia_movil(){
             contenido_tel_movil += element.nombre;
             contenido_tel_movil += '</div>';
             contenido_tel_movil += '<div class="col-2">';
-            contenido_tel_movil += '<input type="number" class="form-control" placeholder="Cantidad" min="1" max="100" onchange="valida_totales_tel_movil('+element.id+',this.value)">';
+            contenido_tel_movil += '<input type="number" id="cantidad_tel_movil_'+element.id+'" class="form-control" placeholder="Cantidad" min="1" max="100" onchange="valida_totales_tel_movil('+element.id+',this.value)">';
             contenido_tel_movil += '</div>';
             contenido_tel_movil += '<div class="col-3">';
             contenido_tel_movil += '<input type="text" class="form-control" placeholder="precio" value="'+element.precio+'" disabled>';
@@ -54,10 +54,10 @@ function _planes_telefonia_movil(){
         contenido_tel_movil += '</div>';
         contenido_tel_movil += '<div class="row top-buffer">';
         contenido_tel_movil += '<div class="col-6">';
-        contenido_tel_movil += '<button type="button" class="btn btn-lg btn-block btn-outline-primary" id="agregar_tel_movil">Agregar</button>';
+        contenido_tel_movil += '<button type="button" class="btn btn-lg btn-block btn-outline-primary" id="agregar_tel_movil"  value="tel_movil" onclick="_agregar(this.id,this.value)">Agregar</button>';
         contenido_tel_movil += '</div>';
         contenido_tel_movil += ' <div class="col-6">';
-        contenido_tel_movil += '<button type="button" class="btn btn-lg btn-block btn-outline-primary" id="cancelar_tel_movil">Cancelar</button>';
+        contenido_tel_movil += '<button type="button" class="btn btn-lg btn-block btn-outline-primary" id="cancelar_tel_movil" value="tel_movil"  onclick="cancelar(this.id,this.value)">Cancelar</button>';
         contenido_tel_movil += ' </div>';
         contenido_tel_movil += ' </div>';
         contenido_tel_movil += '';

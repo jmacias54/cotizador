@@ -40,7 +40,7 @@ function _planesIOT(){
            
             contenido_planes_iot += '</div>';
             contenido_planes_iot += '<div class="col-2">';
-            contenido_planes_iot += '<input type="number" class="form-control" placeholder="Cantidad" min="1" max="100" onchange="valida_totales_iot('+element.id+',this.value)">';
+            contenido_planes_iot += '<input type="number" id="cantidad_iot_'+element.id+'"class="form-control" placeholder="Cantidad" min="1" max="100" onchange="valida_totales_iot('+element.id+',this.value)">';
             contenido_planes_iot += '</div>';
             contenido_planes_iot += '<div class="col-3">';
             contenido_planes_iot += '<input type="text" class="form-control" placeholder="precio" value="'+element.precio+'" disabled>';
@@ -59,10 +59,10 @@ function _planesIOT(){
         contenido_planes_iot += '</div>';
         contenido_planes_iot += '<div class="row top-buffer">';
         contenido_planes_iot += '<div class="col-6">';
-        contenido_planes_iot += '<button type="button" class="btn btn-lg btn-block btn-outline-primary" id="agregariot">Agregar</button>';
+        contenido_planes_iot += '<button type="button" class="btn btn-lg btn-block btn-outline-primary" id="agregar_iot" value="iot"   onclick="_agregar(this.id,this.value)">Agregar</button>';
         contenido_planes_iot += '</div>';
         contenido_planes_iot += ' <div class="col-6">';
-        contenido_planes_iot += '<button type="button" class="btn btn-lg btn-block btn-outline-primary" id="cancelar_iot">Cancelar</button>';
+        contenido_planes_iot += '<button type="button" class="btn btn-lg btn-block btn-outline-primary" id="cancelar_iot" value="iot"  onclick="cancelar(this.id,this.value)">Cancelar</button>';
         contenido_planes_iot += ' </div>';
         contenido_planes_iot += ' <div class="col">';
         contenido_planes_iot += '  <font color="red"><small>* Elementos adicionales al Kit<small></font>';
@@ -74,4 +74,16 @@ function _planesIOT(){
         return contenido_planes_iot;
 
     }
+}
+
+
+
+
+
+function guardar(id_input,plan){
+    console.log(" --- guardar --- ");
+    console.log(id_input);
+    console.log(plan);
+
+  
 }
